@@ -12,6 +12,13 @@ export const characterResolver = {
         }
 
     },
+    Mutation: {
+        createCharacter(root: void, args: any){
+            args.character._id = `${data.characters.length+1}`
+            data.characters.push(args.character)
+            return 'Character added successfully'
+        }
+    },
     Character: {
         games(parent: any ){
             //console.log(parent)
@@ -19,7 +26,6 @@ export const characterResolver = {
             parent.games.map((gameId: string)=>
             gameList.push(...data.games.filter(game => game._id === gameId))
             )
-            //console.log(gameList)
             return gameList
         }
     }

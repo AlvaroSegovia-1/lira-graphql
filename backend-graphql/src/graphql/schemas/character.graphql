@@ -3,12 +3,17 @@ type Query {
   getCharacter(_id: ID!): Character
 }
 
+type Mutation {
+  createCharacter(character: NewCharacterInput! ): String!
+}
+
 type Character {
   _id: ID
   name: String
   race: Race
   gender: Gender
   games: [Game]
+  image: String
 }
 
 enum Race {
@@ -20,4 +25,12 @@ enum Race {
 enum Gender{
   MALE
   FEMALE
+}
+
+input NewCharacterInput {
+  name: String!
+  race: Race!
+  gender: Gender!
+  games: [String!]!
+  image: String!
 }
