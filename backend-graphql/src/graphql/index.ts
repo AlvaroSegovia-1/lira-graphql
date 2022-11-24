@@ -13,9 +13,9 @@ export const schema: GraphQLSchema = mergeSchemas({
      character, 
      game
    ],
-   /*  resolvers: [
+    resolvers: [
         characterResolver,
         gameResolver
-    ] */
+    ]
  })
 

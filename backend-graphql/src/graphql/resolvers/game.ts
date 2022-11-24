@@ -1,8 +1,8 @@
-import {IResolvers} from '@graphql-tools/utils'
+//import {IResolvers} from '@graphql-tools/utils'
 
-export const gameResolver: IResolvers = {
+export const gameResolver = {
     Query: {
-        gameHello(){
+        gameHello(root: any){
             return "game works"
         },
     }
