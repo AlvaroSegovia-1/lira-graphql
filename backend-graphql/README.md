@@ -1,1 +1,1 @@
-### Curso de Graphql con typescript
+### Curso de Graphql con typescript, express, mongodb
